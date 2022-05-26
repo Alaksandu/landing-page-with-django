@@ -1,11 +1,13 @@
-__pycache__
+# ignora-los quando for levar para produção (heroku)
 
-*.*~
+#__pycache__
 
-*.pyc
+#*.*~
 
-.env
+#*.pyc
 
-.idea
+#.env
 
-template/*
+#.idea
+
+#template/*

@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'fusion.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-"""
+# Colocar em aspas tripla quando for upar para produção (heroku)
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -92,11 +92,11 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-"""
 
-DATABASES = {
-    'default': dj_database_url.config()
-}
+# Usar apenas em produção (heroku)
+# DATABASES = {
+#    'default': dj_database_url.config()
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -145,7 +145,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # E-mail teste console
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 """
 # Email Produção
@@ -158,6 +158,6 @@ EMAIL_HOST_PASSWORD = 'fusion'
 DEFAULT_FROM_EMAIL = 'contato@fusion.com.br'
 
 """
-
-LOGOUT_REDIRECT_URL = 'index'
+# Ao fazer logout do admin, ele retorna para index (produção)
+# LOGOUT_REDIRECT_URL = 'index'
 
