@@ -155,7 +155,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Email Produção
 
 EMAIL_HOST= 'localhost'
-EMAIL_HOST_USER = 'no-reply@fusion.com.br
+EMAIL_HOST_USER = 'no-reply@fusion.com.br'
 EMAIL_PORT = 587
 EMAIL_USE_TSL = True
 EMAIL_HOST_PASSWORD = 'fusion'
